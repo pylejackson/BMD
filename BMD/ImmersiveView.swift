@@ -12,8 +12,8 @@ struct ImmersiveView: View {
     var body: some View {
         RealityView { content in
             let box1 = ModelEntity(
-                mesh: .generateSphere(radius: 0.1),
-                materials: [SimpleMaterial(color: .cyan, isMetallic: false)])
+                mesh: .generateBox(size: 0.2),
+                materials: [SimpleMaterial(color: .green, isMetallic: false)])
             box1.position = [-0.6, 1.2, -1]
             content.add(box1)
             Task{
@@ -25,7 +25,7 @@ struct ImmersiveView: View {
             }
             let sphere1 = ModelEntity(
                 mesh: .generateSphere(radius: 0.1),
-                materials: [SimpleMaterial(color: .red, isMetallic: false)])
+                materials: [SimpleMaterial(color: .blue, isMetallic: false)])
             sphere1.position = [-0.3, 1.2, -1]
             content.add(sphere1)
             Task{
@@ -36,7 +36,7 @@ struct ImmersiveView: View {
                 )
             }
             let sphere2 = ModelEntity(
-                mesh: .generateBox(size: 0.15),
+                mesh: .generateSphere(radius: 0.1),
                 materials: [SimpleMaterial(color: .yellow, isMetallic: false)])
             sphere2.position = [0, 1.2, -1]
             content.add(sphere2)
@@ -48,8 +48,8 @@ struct ImmersiveView: View {
                 )
             }
             let box2 = ModelEntity(
-                mesh: .generateBox(size: 0.15),
-                materials: [SimpleMaterial(color: .green, isMetallic: false)])
+                mesh: .generateSphere(radius: 0.1),
+                materials: [SimpleMaterial(color: .red, isMetallic: false)])
             box2.position = [0.3, 1.2, -1]
             content.add(box2)
             Task{
@@ -60,8 +60,8 @@ struct ImmersiveView: View {
                 )
             }
             let sphere3 = ModelEntity(
-                mesh: .generateSphere(radius: 0.1),
-                materials: [SimpleMaterial(color: .purple, isMetallic: false)])
+                mesh: .generateBox(size: 0.2),
+                materials: [SimpleMaterial(color: .green, isMetallic: false)])
             sphere3.position = [0.6, 1.2, -1]
             content.add(sphere3)
             Task{
